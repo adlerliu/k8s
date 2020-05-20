@@ -15,9 +15,11 @@ spec:
       readOnly: true
   volumes:
   - name: mysql-cred
-    projected:
-      sources:
-      - secret:
-          name: user
-      - secret:
-          name: pass
+    secret:
+      secretName: mysecret
+#    projected:
+#      sources:
+#      - secret:
+#          name: user
+#      - secret:
+#          name: pass
